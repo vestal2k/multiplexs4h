@@ -1,4 +1,5 @@
 # Claude documentation (local only)
+.claude/
 claude/
 
 # OS files
@@ -18,3 +19,7 @@ npm-debug.log*
 # Environment variables
 .env
 .env.local
+
+# Node modules
+node_modules/
+package-lock.json
