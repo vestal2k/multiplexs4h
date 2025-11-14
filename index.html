@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplex Stream 4 Humanity</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎮 Multiplex Stream 4 Humanity</h1>
+        <div class="controls">
+            <button id="refreshBtn">🔄 Rafraîchir les streams</button>
+            <select id="layoutSelect">
+                <option value="2">2 streams</option>
+                <option value="4" selected>4 streams</option>
+                <option value="6">6 streams</option>
+                <option value="9">9 streams</option>
+            </select>
+        </div>
+    </header>
+
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Chargement des streams...</p>
+    </div>
+
+    <div id="error" class="error" style="display: none;">
+        <p>⚠️ Une erreur est survenue. Vérifiez votre connexion et réessayez.</p>
+    </div>
+
+    <aside id="streamerList" class="streamer-list">
+        <h2>Streamers disponibles</h2>
+        <div id="streamers" class="streamers-container"></div>
+    </aside>
+
+    <main id="streamGrid" class="stream-grid"></main>
+
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
