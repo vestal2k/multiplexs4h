@@ -9,9 +9,11 @@
 </head>
 <body>
     <header>
-        <h1>🎮 Multiplex Stream 4 Humanity</h1>
+        <div class="header-left">
+            <h1>Multiplex <span class="logo-accent">S4H</span></h1>
+        </div>
         <div class="controls">
-            <button id="refreshBtn">🔄 Rafraîchir les streams</button>
+            <button id="refreshBtn">Rafraîchir</button>
             <select id="layoutSelect">
                 <option value="2">2 streams</option>
                 <option value="4" selected>4 streams</option>
@@ -27,11 +29,20 @@
     </div>
 
     <div id="error" class="error" style="display: none;">
-        <p>⚠️ Une erreur est survenue. Vérifiez votre connexion et réessayez.</p>
+        <p>Une erreur est survenue. Vérifiez votre connexion et réessayez.</p>
     </div>
 
+    <button id="toggleSidebar" title="Afficher/masquer la liste">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6"/>
+        </svg>
+    </button>
+
     <aside id="streamerList" class="streamer-list">
-        <h2>Streamers disponibles</h2>
+        <div class="streamer-list-header">
+            <h2>Streamers en direct</h2>
+            <span id="streamerCount" style="color: var(--text-muted); font-size: 0.875rem;">0</span>
+        </div>
         <div id="streamers" class="streamers-container"></div>
     </aside>
 
