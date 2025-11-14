@@ -192,6 +192,17 @@ class TwitchMultiplex {
         }
         this.updateLayout();
         this.updateStreamVisibility();
+        this.updateFocusButtons();
+    }
+
+    updateFocusButtons() {
+        document.querySelectorAll('.focus-btn').forEach((btn, index) => {
+            if (this.focusedStreamIndex === index) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
     }
 
     updateStreamVisibility() {
